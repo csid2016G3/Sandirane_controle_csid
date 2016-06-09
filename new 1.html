@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+First : <input type="text" ng-model="first"><br>
+Last : <input type="text" ng-model="last"><br>
+<br>
+Full : {{first + " " + last}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.first = "1";
+    $scope.last = "2";
+});
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>A demonstration of how to access a Search field</h3>
+
+<input type="search" id="mySearch" placeholder="Search for something..">
+
+<p>Click the button to get the placeholder text of the search field.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("mySearch").placeholder;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+_______________________________________________________________
+// html
+
+
+<div ng-controler=’SearchControler’ as CTRL>
+	<div class=’row’ >
+		<input ng-modif = ctrl.startlocation’>
+	</div>
+<br/>
+  <button type="submit" class="btn btn-default">Recherche</button>
+
+
+_______________________________________________________________
+
+// JS service
+
+
+Angular.module(‘appa,[‘iu.router’]).service(….() {
+
+		$state(provider)
+		$state.state(‘driver’, {	url :’…..’
+					templateUrl:’…..’
+					controller:……
+					});
+
+
+
+$sate.go(‘searchResultat’,{resultat :data})
+
+
+self.resultat = data ;
+
+_________________________________________________________________
+//JS controler
+
+
+@RESTControler
+@RequestMapping(	produces=’…..json’
+Consumes=’…..json’
+Path=’/search’)
+Class SearchControler{
+@requestMapping( methode=requestMethode.post)
+search ( @requestBody searchPerson) { 
+class Searchperson{
+		String startLocation;
+.
+}
+Class SearchResult { List<SearchMatch> …; …….}
+O1= searcService.search(..);
+Res =new searchResult(…);
+Return res;
+
+Angular.controler(‘….’,function(){
+Var self this ;
+Self.startlocation :’….’ ;
+Self.onSearch= function (){
+$log.info(‘search…’ + self.location);
+}
+Angular.service(‘searchService’, function() {
+Search =$ressource.ressource(‘/search’,{get})
+Search.get();
+}
+}) ;
+
+_______________________________________________________________
+//Rest EndPoint
+@Dto("autowire.MyEntityClass")
+public class MyDtoClass {
+ 
+}
+final Assembler assembler = DTOAssembler.newAssembler(MyDtoClass.class);
+_______________________________________________________________
+
+//SERVICE JAVA
+
+@composant
+Class SearchService{
+@inject Locationrepository
+Search(startLocation) {
+Location start = locationRepository.findbyNameLike(SearchLocation);
+List<path> res = pathRepository.findBy…. (iut.id)
+List<PathDTO> dto = …(res)
+Return dto;}
+}
+_______________________________________________________________
+
+//Repository
+
+Repository
+Interface LocationRepository
+		Implements JPARepository<>{}
+		@query
+		List…. FindByNAME(String requeteNAme);
